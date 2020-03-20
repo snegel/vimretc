@@ -1,0 +1,38 @@
+# All snippets van Gertjan Laan, december 2019
+snippet datum "Datum" w
+`!v strftime("%d %b %Y")`
+endsnippet
+
+snippet snip "snippet" !b
+snippet ${1:Tab-trigger} "${2:Omschrijving}" ${3:!b}
+$4
+`!p snip.rv="endsnippet"`
+$0
+endsnippet
+
+snippet simp_123 "Simpel" !b
+`!p snip.rv = "Hello"`
+endsnippet
+
+# Alles wat tussen global en endglobal staat, is beschikbaar voor alle snippets die hieronder in deze file staan
+# In dit geval gaat het om de complete-functie
+# Zie ook UltiSnips Screencast Ep 4 Python Interpolation
+global !p
+def complete(t, opts):
+	if t:
+		opts = [m[len(t):] for m in opts if m.startswith(t)]
+	if len(opts) == 1:
+		return opts[0]
+	return '(' + '|'.join(opts) + ')'
+endglobal
+
+
+# t[1] bevat de huidige tekst van de tabstop, dat is in dit geval de lege string
+snippet st "Status" b
+ status $1`!p snip.rv=complete(t[1], ['new','incomplete','invalid'])`
+endsnippet
+
+
+#snippet test "Testen van aanhalingstekens om woord" b
+#`!p snip.rv="'" + t[1] + "'"`$1
+#endsnippet

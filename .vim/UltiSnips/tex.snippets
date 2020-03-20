@@ -1,0 +1,115 @@
+# tex snippets van Gertjan Laan, december 2019
+
+snippet $ "$$" A
+$$1$
+endsnippet
+
+snippet "b(egin)?" "begin{}  end{}" br
+\begin{$1}
+  $2
+\end{$1}
+$0
+endsnippet
+
+snippet fr "figuur~\ref{}"
+figuur~\ref{fig:$1}
+endsnippet
+
+snippet fig "Figuur" b
+\begin{figure}[!htpb]
+  \centering
+  \includegraphics[width=${1:}\linewidth]{${2:naam}}
+  \caption{$3}
+  \label{fig:$2}
+\end{figure}
+$0
+endsnippet
+
+snippet mf "margin figure" b
+\begin{marginfigure}[${1:0.0cm}]
+  \includegraphics{${2:naam}}
+  \caption{$3}
+  \label{fig:$2}
+\end{marginfigure}
+$0
+endsnippet
+
+snippet "(\w+)in" "In index (postfix)" r
+\\index{`!p snip.rv = match.group(1)`}
+endsnippet
+
+snippet "(\w+)be" "\begin \end omgeving (postfix)" r
+\\begin{`!p snip.rv = match.group(1)`}
+  $1
+\\end{`!p snip.rv = match.group(1)`}
+$0
+endsnippet
+
+
+snippet ch "Chapter" b
+\chapter{$1}
+$0
+endsnippet
+
+
+snippet chl "Chapter" b
+\chapter{$1}\label{$1}
+$0
+endsnippet
+
+
+snippet chi "Chapter" b
+\chapter{$1}\index{$1}
+$0
+endsnippet
+
+
+snippet chil "Chapter" b
+\chapter{$1}\index{$1}\label{$1}
+$0
+endsnippet
+
+snippet nt "newthought" b
+\newthought{$1} $0
+endsnippet
+
+snippet RB "Russische Buurt"
+Russische Buurt
+endsnippet
+
+snippet rf "Referentie naar figuur"
+\\ref{fig:$1}$0
+endsnippet
+
+
+snippet sec "Sectie"
+\section{${1:${VISUAL:sectienaam}}}\label{sec:$2}\index{$2}
+$0
+endsnippet
+
+snippet sec* "Sectie*"
+\section*{${1:${VISUAL:sectienaam}}}\label{sec:$2}\index{$2}
+$0
+endsnippet
+
+snippet np "newpage" bA
+\newpage
+$0
+endsnippet
+
+
+
+
+#
+#
+#snippet sub "Subsection"
+#\subsection{${1:${VISUAL:subsection name}}}%
+#\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+#$0
+#endsnippet
+#
+#snippet sub* "Subsection"
+#\subsection*{${1:${VISUAL:subsection name}}}%
+#\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+#${0}
+#endsnippet

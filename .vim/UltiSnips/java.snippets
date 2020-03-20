@@ -1,0 +1,19 @@
+# Java-snippets van Gertjan Laan, 05 jan 2020 
+snippet sop "System.out.println()"
+System.out.println($1);
+$0
+endsnippet
+
+snippet ap "Applicatie met main"
+public class $1 {
+    public static void main(String[] args) {
+        $2;
+    }
+}
+endsnippet
+
+snippet psvm "public static void main" 
+public static void main(String[] args) {
+    $1
+}
+endsnippet
