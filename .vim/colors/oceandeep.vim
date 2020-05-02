@@ -69,7 +69,8 @@ highlight VisualNOS     gui=bold,underline guifg=fg guibg=bg
 highlight WarningMsg    gui=bold guifg=FireBrick1 guibg=bg
 highlight WildMenu      gui=bold guibg=Chartreuse guifg=Black
 
-highlight Comment       gui=None guifg=#507080
+"highlight Comment       gui=None guifg=#507080
+highlight Comment       gui=None guifg=Yellow
 highlight Constant      guifg=cyan3 guibg=bg
 highlight String        gui=None guifg=turquoise2 guibg=bg
 highlight Number        gui=None guifg=Cyan guibg=bg
@@ -128,7 +129,8 @@ highlight Search        ctermfg=Black ctermbg=Red cterm=NONE
 highlight Visual        cterm=reverse
 highlight Cursor        ctermfg=Black ctermbg=Green cterm=bold
 highlight Special       ctermfg=Brown
-highlight Comment       ctermfg=DarkGray
+"highlight Comment       ctermfg=DarkGray
+highlight Comment       ctermfg=White
 highlight StatusLine    ctermfg=Blue ctermbg=White
 highlight Statement     ctermfg=Yellow cterm=NONE
 highlight Type          cterm=NONE

@@ -16,7 +16,7 @@ else
   endif
 endif
 
-set rtp+=/home/gertjan/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -182,3 +182,9 @@ let g:UltiSnipsEditSplit="vertical"
 " Begin met scrollen zeven regels voor de onderkant of bovenkant van het scherm
 set scrolloff=7
 
+" Spring bij het openen naar de regel waar je vorige keer gebleven was
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+let g:netrw_browsex_viewer= "setsid xdg-open"
