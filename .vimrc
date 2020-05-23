@@ -188,3 +188,7 @@ if has("autocmd")
 endif
 
 let g:netrw_browsex_viewer= "setsid xdg-open"
+
+"Printer
+set pdev=HLL2300D
+
