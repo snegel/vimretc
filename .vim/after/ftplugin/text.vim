@@ -14,3 +14,7 @@ inoremap <F3> <ESC>"np0<C-A>"nyyA
 " bedoeling het in insert mode te plakken en te verhogen (zie inoremap <F3>)
 " Startgetal voor nummering van volgende paragraaf
 vnoremap <F3> t.ll"ny
+
+nnoremap <F2> "+gP
+inoremap <F2> <Esc>"+gP
+

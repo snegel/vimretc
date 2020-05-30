@@ -24,8 +24,8 @@ nnoremap <S-F12> :call TogglePrologCommentaar()<CR>a
 " Forth uitvoeren
 " Open de gForth-omgeving in een venster rechts; <CR-\><C-N> brengt je in Terminal normal mode
 " Eindigen met bye en F7, of Ctrl D F7
-inoremap <F6> <Esc>:wa<CR>:vert term gforth %<CR>
-nnoremap <F6> :wa<CR>:vert term gforth %<CR>
+inoremap <F6> <Esc>:wa<CR>:vert term gforth % -e bye<CR>
+nnoremap <F6> :wa<CR>:vert term gforth % -e bye<CR>
 
 colorscheme delek
 AirlineRefresh
