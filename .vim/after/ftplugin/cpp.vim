@@ -28,7 +28,7 @@ inoremap <buffer> <F2> <Esc>ko
 "inoremap <F5> <Esc>:w<CR>:!g++-10 -std=c++20 -o %.r %<CR>
 "nnoremap <F5> :w<CR>:!g++-10 -std=c++20 -o %:r %<CR>
 inoremap <F5> <Esc>:w<CR>:term g++-10 -std=c++20 -o %.r %<CR>
-nnoremap <F5> :w<CR>:term g++-10 -std=c++20 -o %:r %<CR>
+nnoremap <F5> :w<CR>:term g++-10 -std=c++20 -I/home/gertjan/Code/range-v3/include/ -o %:r %<CR>
 
 " Open de C++-uitvoer in een venster rechts
 "inoremap <F6> <Esc>:vert term ./%:r<CR>
