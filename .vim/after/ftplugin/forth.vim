@@ -27,5 +27,5 @@ nnoremap <S-F12> :call TogglePrologCommentaar()<CR>a
 inoremap <F6> <Esc>:wa<CR>:vert term gforth % -e bye<CR>
 nnoremap <F6> :wa<CR>:vert term gforth % -e bye<CR>
 
-colorscheme delek
+colorscheme fruity
 AirlineRefresh
